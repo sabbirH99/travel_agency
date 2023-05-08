@@ -1,0 +1,67 @@
+:root {
+    box-sizing: border-box;
+}
+
+$primary: #86B817;
+$secondary: #FE8800;
+$light: #F5F5F5;
+$dark: #14141F;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// spinner
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out linear 0.5s;
+    z-index: 10;
+}
+
+#spinner.is-shown {
+    opacity: 1;
+    visibility: visible;
+}
+
+// navbar
+.nav-link {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+}
+
+// hero
+
+.hero-header {
+    background: linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url(../img/bg-hero.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+// about
+.section-title {
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background: $primary;
+    z-index: -1;
+}
+
+.section-title::after {
+    width: calc(100 + 60px);
+    left: 0;
+    bottom: 5px;
+}
+
+@import "extra";

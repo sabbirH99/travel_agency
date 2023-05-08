@@ -1,0 +1,63 @@
+:root {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out linear 0.5s;
+  z-index: 10;
+}
+
+#spinner.is-shown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+}
+
+.hero-header {
+  background: linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url(../img/bg-hero.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.section-title::before, .section-title::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background: #86B817;
+  z-index: -1;
+}
+
+.section-title::after {
+  width: calc(100% + 80px);
+  left: 0;
+  bottom: 5px;
+}
+
+.section-title::before {
+  width: calc(100% + 60px);
+  left: 0;
+  top: 5px;
+}
+
+.about h1 span {
+  color: #86B817;
+}/*# sourceMappingURL=style.css.map */
